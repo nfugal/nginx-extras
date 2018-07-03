@@ -17,7 +17,7 @@ RUN add-apt-repository -y ppa:certbot/certbot
 # Install packages
 RUN apt-get update
 RUN DEBIAN_FRONTEND=noninteractive apt-get -yq install tzdata
-RUN aptitude install -y nginx-extras most htop neovim ufw fail2ban certbot python-certbot-nginx
+RUN apt-get install -y nginx-extras most htop neovim ufw fail2ban certbot python-certbot-nginx
 
 # Link stdout and stderr to log files
 RUN ln -sf /dev/stdout /var/log/nginx/access.log
